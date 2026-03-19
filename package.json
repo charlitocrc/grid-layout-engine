@@ -1,5 +1,5 @@
 {
-  "name": "grid-layout-engine",
+  "name": "grid-layout-engine-js",
   "version": "0.1.0",
   "description": "A pure JavaScript draggable, resizable grid layout engine with no framework dependencies",
   "type": "module",

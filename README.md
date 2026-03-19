@@ -225,7 +225,7 @@ Then reference: `node_modules/grid-layout-engine/dist/grid-layout-engine.min.js`
 
 **Option B — CDN (unpkg):**
 ```html
-<script src="https://unpkg.com/grid-layout-engine@0.1.0/dist/grid-layout-engine.min.js"></script>
+<script src="https://unpkg.com/grid-layout-engine-js@0.1.0/dist/grid-layout-engine.min.js"></script>
 ```
 
 **Option C — Copy the file** from `dist/grid-layout-engine.min.js` into your project.
