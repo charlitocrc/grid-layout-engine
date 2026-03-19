@@ -1,0 +1,68 @@
+{
+  "name": "grid-layout-engine",
+  "version": "0.1.0",
+  "description": "A pure JavaScript draggable, resizable grid layout engine with no framework dependencies",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./core": {
+      "types": "./dist/core.d.ts",
+      "import": "./dist/core.js",
+      "require": "./dist/core.cjs"
+    },
+    "./extras": {
+      "types": "./dist/extras.d.ts",
+      "import": "./dist/extras.js",
+      "require": "./dist/extras.cjs"
+    },
+    "./css/grid-layout.css": "./src/css/grid-layout.css"
+  },
+  "files": [
+    "dist",
+    "src/css"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "lint": "eslint src/",
+    "fmt": "prettier --write src/"
+  },
+  "keywords": [
+    "grid",
+    "layout",
+    "draggable",
+    "resizable",
+    "dashboard",
+    "vanilla-js",
+    "typescript",
+    "framework-agnostic"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/charlitocrc/grid-layout-engine.git"
+  },
+  "bugs": {
+    "url": "https://github.com/charlitocrc/grid-layout-engine/issues"
+  },
+  "homepage": "https://github.com/charlitocrc/grid-layout-engine#readme",
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^3.0.0",
+    "jsdom": "^26.0.0",
+    "prettier": "^3.2.0"
+  }
+}

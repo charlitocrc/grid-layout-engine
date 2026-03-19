@@ -1,0 +1,133 @@
+.grid-layout {
+  position: relative;
+  transition: height 200ms ease;
+}
+
+.grid-item {
+  transition: all 200ms ease;
+  transition-property: left, top, width, height;
+}
+
+.grid-item img {
+  pointer-events: none;
+  user-select: none;
+}
+
+.grid-item.grid-css-transforms {
+  transition-property: transform, width, height;
+}
+
+.grid-item.grid-resizing {
+  transition: none;
+  z-index: 1;
+  will-change: width, height;
+}
+
+.grid-item.grid-dragging {
+  transition: none;
+  z-index: 3;
+  will-change: transform;
+}
+
+.grid-item.grid-dropping {
+  visibility: hidden;
+}
+
+.grid-item.grid-placeholder {
+  background: red;
+  opacity: 0.2;
+  transition-duration: 100ms;
+  z-index: 2;
+  user-select: none;
+}
+
+.grid-item.grid-placeholder.grid-placeholder-resizing {
+  transition: none;
+}
+
+.grid-item > .grid-resizable-handle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+}
+
+.grid-item:hover > .grid-resizable-handle {
+  opacity: 1;
+}
+
+.grid-item > .grid-resizable-handle::after {
+  content: "";
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+  width: 5px;
+  height: 5px;
+  border-right: 2px solid rgba(0, 0, 0, 0.4);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+}
+
+.grid-resizable-hide > .grid-resizable-handle {
+  display: none;
+}
+
+.grid-item > .grid-resizable-handle-sw {
+  bottom: 0;
+  left: 0;
+  cursor: sw-resize;
+  transform: rotate(90deg);
+}
+
+.grid-item > .grid-resizable-handle-se {
+  bottom: 0;
+  right: 0;
+  cursor: se-resize;
+}
+
+.grid-item > .grid-resizable-handle-nw {
+  top: 0;
+  left: 0;
+  cursor: nw-resize;
+  transform: rotate(180deg);
+}
+
+.grid-item > .grid-resizable-handle-ne {
+  top: 0;
+  right: 0;
+  cursor: ne-resize;
+  transform: rotate(270deg);
+}
+
+.grid-item > .grid-resizable-handle-w,
+.grid-item > .grid-resizable-handle-e {
+  top: 50%;
+  margin-top: -10px;
+  cursor: ew-resize;
+}
+
+.grid-item > .grid-resizable-handle-w {
+  left: 0;
+  transform: rotate(135deg);
+}
+
+.grid-item > .grid-resizable-handle-e {
+  right: 0;
+  transform: rotate(315deg);
+}
+
+.grid-item > .grid-resizable-handle-n,
+.grid-item > .grid-resizable-handle-s {
+  left: 50%;
+  margin-left: -10px;
+  cursor: ns-resize;
+}
+
+.grid-item > .grid-resizable-handle-n {
+  top: 0;
+  transform: rotate(225deg);
+}
+
+.grid-item > .grid-resizable-handle-s {
+  bottom: 0;
+  transform: rotate(45deg);
+}
